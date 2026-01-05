@@ -10,6 +10,8 @@ public record CategoryInfo(
 		Category category
 		) implements Info{
 	
+	
+	//changing entity to dto
 	public static CategoryInfo from(Category c) {
 		return new CategoryInfo(c.getId(),c.getName(),c.getCategory());
 	}
