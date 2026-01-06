@@ -17,5 +17,20 @@ public class ExceptionHandlers {
 		return e.getFieldErrors()
 				.stream().map(error -> error.getDefaultMessage()).toList();
 	}
+	
+//	@ExceptionHandler({
+//		CategoryNotFoundException.class,
+//		ItemNotFoundException.class
+//		})
+//	public ResponseEntity handlingException(Exception ex, WebRequest request) throws Exception{
+//		return handleExceptionInternal(ex, message(ex), new HttpHeaders(),HttpStatus.BAD_REQUEST, request);
+//	}
+//	
+//	public ApiError message(Exception ex) {
+//		String msg = ex != null ? ex.getMessage() : "UNKNOWN ERROR!";
+//		return new ApiError(HttpStatus.BAD_REQUEST.value(),
+//							LocalDateTime.now() ,
+//							msg);
+//	}
 
 }

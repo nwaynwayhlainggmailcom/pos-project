@@ -8,20 +8,22 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record CategoryForm(
+		
+		//Integer id,
 		@NotBlank(message = "Please type category name !") 
 		String name,
-		@NotNull(message = "Please type category id!")
 		Integer categoryId,
 		Boolean isActive) {
 
-	public Category entity() {
+	public Category entity(Integer id) {
 		var cat = new Category();
+		cat.setId(id);
 		cat.setName(name);
-		cat.setActive(isActive);
-		
-		var catId = new Category();
-		
+		cat.setIsActive(isActive);
+
 		if (null != categoryId) {
+			
+			var catId = new Category();
 			catId.setId(categoryId);
 			cat.setCategory(catId);
 		}

@@ -19,7 +19,7 @@ public class SalesDetails {
 	@ManyToOne
 	private Sale sale;
 	@ManyToOne
-	private SaleProduct saleProduct;
+	private ProductPrice productPrice;
 	
 	
 

@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 @Embeddable
 public class PurchaseDetailsPk implements Serializable{
-	
+
 	private static final long serialVersionUID = 1L;
 	
 	private LocalTime purchaseTime;
@@ -23,7 +23,4 @@ public class PurchaseDetailsPk implements Serializable{
 	@Column(name = "size_id",insertable = false,updatable = false)
 	private int sizeId;
 	
-	
-	
-
 }
